@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem, copyArrayItem, CdkDrag, CdkDropList} from '@angular/cdk/drag-drop';
 
 /**
- * @title Drag&Drop connected sorting
+ * @title Drag&Drop connected sorting UNUSED FOR NOW
  */
 @Component({
   selector: 'app-drag-n-drop',

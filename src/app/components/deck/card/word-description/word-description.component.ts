@@ -1,6 +1,7 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
+// UNUSED FOR NOW
 @Component({
   selector: 'app-word-description',
   templateUrl: './word-description.component.html',
