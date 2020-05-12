@@ -1,0 +1,42 @@
+<div class='card-container'>
+  <!--  <div class='flippable-card' [ngClass]="{'flipped':flipped}" (click)='flipped = !flipped'>-->
+  <div>
+    <!--    <mat-card class=''>-->
+    <!--      <mat-card-title>Booya</mat-card-title>-->
+    <!--    </mat-card>-->
+    <mat-card class="example-card">
+      <!--      <mat-card-header>-->
+      <!--        <div mat-card-avatar class="example-header-image"></div>-->
+      <!--        <mat-card-title>Shiba Inu</mat-card-title>-->
+      <!--        <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+      <!--      </mat-card-header>-->
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <!--            <mat-panel-title>-->
+          <!--              <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"-->
+          <!--                   alt="Photo of a Shiba Inu">-->
+          <!--            </mat-panel-title>-->
+          <mat-card-content>
+            {{card.original}}
+          </mat-card-content>
+        </mat-expansion-panel-header>
+        {{card.translation}}
+      </mat-expansion-panel>
+      <mat-card-actions>
+        <ng-template #popTitle>Word type: tip rijeci</ng-template>
+        <ng-template #popContent>Example Sentence:neka recenica Sentence in source: recenica u izvoru</ng-template>
+        <button mat-raised-button placement="bottom"
+                [ngbPopover]="popContent" [popoverTitle]="popTitle"
+                container="body">
+          Additional Info
+        </button>
+        <!--        <button mat-raised-button (click)="openDialog()">Additional Info</button>-->
+      </mat-card-actions>
+    </mat-card>
+    <!--    <mat-card class='back'>-->
+    <!--      <mat-card-title>to ya</mat-card-title>-->
+    <!--    </mat-card>-->
+  </div>
+</div>
+

@@ -1,0 +1,36 @@
+<div cdkDropListGroup>
+    <div class="example-container">
+        <div cdkDropList cdkDropListOrientation="horizontal" 
+            id="logicOperatorsList"
+            [cdkDropListData]="logicOperators" 
+            [cdkDropListConnectedTo]="['finalFilterExpresionList']"
+            [cdkDropListEnterPredicate]="noOriginMixPredicate" 
+            class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let op of logicOperators" cdkDrag>{{ op }}</div>
+        </div>
+
+        <div cdkDropList cdkDropListOrientation="horizontal"
+            id="compareOperatorsList"
+            [cdkDropListData]="compareOperators" 
+            [cdkDropListConnectedTo]="['finalFilterExpresionList']"
+            [cdkDropListEnterPredicate]="noOriginMixPredicate" 
+            class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let op of compareOperators" cdkDrag>{{ op }}</div>
+        </div>
+    </div>
+
+    <div class="example-container">
+        <h4>Formula Box</h4>
+
+        <div cdkDropList cdkDropListOrientation="horizontal" 
+            id="finalFilterExpresionList"
+            [cdkDropListData]="finalFilterExpresion"
+            [cdkDropListConnectedTo]="['compareOperatorsList', 'logicOperatorsList']" 
+            class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let item of finalFilterExpresion" cdkDrag>{{ item }}</div>
+        </div>
+    </div>
+</div>
