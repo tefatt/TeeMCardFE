@@ -25,12 +25,12 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {MbscModule} from '@mobiscroll/angular-lite';
-import {MatGridListModule} from '@angular/material/grid-list';
 import {DeckDetailsComponent} from './components/deck/deck-details/deck-details.component';
 import {CardListComponent} from './components/deck/card-list/card-list.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { WordDescriptionComponent } from './components/deck/card/word-description/word-description.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { DeckEditComponent } from './components/deck/deck-edit/deck-edit.component';
 
 
 @NgModule({
@@ -43,7 +43,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     PageNotFoundComponent,
     DeckCreateComponent,
     DeckDetailsComponent,
-    WordDescriptionComponent
+    WordDescriptionComponent,
+    DeckEditComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +67,6 @@ import {MatDialogModule} from '@angular/material/dialog';
     FormsModule,
     NgbModule,
     MbscModule,
-    MatGridListModule,
     MatAutocompleteModule,
     MatDialogModule
   ],

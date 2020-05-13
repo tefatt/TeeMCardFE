@@ -5,9 +5,9 @@
                [opened]="(isHandset$ | async) === false">
     <mat-toolbar class="nav-content">Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['/decks']">Search Decks</a>
-      <a mat-list-item [routerLink]="['/decks/details']">My Decks</a>
-      <a mat-list-item [routerLink]="['/decks/new']">Create New Deck</a>
+      <a mat-list-item [routerLink]="['/deck']">Search Decks</a>
+      <a mat-list-item [routerLink]="['/deck/details']">My Decks</a>
+      <a mat-list-item [routerLink]="['/deck/create']">Create New Deck</a>
       <a mat-list-item [routerLink]="['/practice']">Practice</a>
       <a mat-list-item [routerLink]="['/challenge']">Challenge Others</a>
     </mat-nav-list>

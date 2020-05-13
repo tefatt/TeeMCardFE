@@ -11,8 +11,7 @@ export class CardListComponent implements OnInit {
   constructor() {
   }
 
-  @Input() visibleCardsIndex: number;
-  cards: Card[];
+  @Input() deck: Card[];
 
   paused = false;
   unpauseOnArrow = false;
@@ -22,42 +21,6 @@ export class CardListComponent implements OnInit {
   @ViewChild('carousel', {static: true}) carousel: NgbCarousel;
 
   ngOnInit(): void {
-    this.cards = [
-      {
-        original: 'lopta',
-        translation: 'top',
-        example: 'Ball is round.'
-      },
-      {
-        original: 'mačka',
-        translation: 'kedi',
-        example: 'Cat is an animal.'
-      },
-      {
-        original: 'ruzgar',
-        translation: 'vjetar',
-        example: 'Wind is blowing.'
-      },
-      {
-        original: 'kalem',
-        translation: 'olovka',
-        example: 'Pencil is an object.'
-      }, {
-        original: 'auto',
-        translation: 'araba',
-        example: 'Car is moving.'
-      },
-      {
-        original: 'miš',
-        translation: 'fare',
-        example: 'Mouse is an animal.'
-      },
-      {
-        original: 'pamuk',
-        translation: 'pamuk',
-        example: 'Cotton is a fabric.'
-      }
-    ];
   }
 
   togglePaused() {

@@ -5,6 +5,7 @@ import {CardComponent} from '../card/card.component';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import {Card} from '../../../models/Card';
 
 @Component({
   selector: 'app-deck-create',
@@ -14,6 +15,8 @@ import {map, startWith} from 'rxjs/operators';
 export class DeckCreateComponent implements OnInit {
   constructor() {
   }
+
+  deck: Card[];
 
   searchValue = 'Enter name here';
   myControl = new FormControl();
@@ -26,6 +29,43 @@ export class DeckCreateComponent implements OnInit {
   filteredOptions: Observable<{}[]>;
 
   ngOnInit() {
+    this.deck = [
+      {
+        original: 'lopta',
+        translation: 'top',
+        example: 'Ball is round.'
+      },
+      {
+        original: 'mačka',
+        translation: 'kedi',
+        example: 'Cat is an animal.'
+      },
+      {
+        original: 'rüzgar',
+        translation: 'vjetar',
+        example: 'Wind is blowing.'
+      },
+      {
+        original: 'kalem',
+        translation: 'olovka',
+        example: 'Pencil is an object.'
+      }, {
+        original: 'auto',
+        translation: 'araba',
+        example: 'Car is moving.'
+      },
+      {
+        original: 'miš',
+        translation: 'fare',
+        example: 'Mouse is an animal.'
+      },
+      {
+        original: 'pamuk',
+        translation: 'pamuk',
+        example: 'Cotton is a fabric.'
+      }
+    ];
+
     this.filteredOptions = this.myControl.valueChanges
       .pipe(
         startWith(''),

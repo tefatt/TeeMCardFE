@@ -1,5 +1,5 @@
 <ngb-carousel #carousel [interval]="1000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
-  <ng-template ngbSlide *ngFor="let card of cards; index as i">
+  <ng-template ngbSlide *ngFor="let card of deck; index as i">
     <div class="carousel-caption">
       <!--      <h3>My slide {{i + 1}} title</h3>-->
     </div>
@@ -9,9 +9,9 @@
     <!--      </div>-->
     <!--    </a>-->
     <div class="card-list">
-      <app-card #previousCard *ngIf="cards[i-1]" [card]="cards[i-1]"></app-card>
-      <app-card #currentCard *ngIf="cards[i]" [card]="cards[i]"></app-card>
-      <app-card #nextCard *ngIf="cards[i+1]" [card]="cards[i+1]"></app-card>
+      <app-card #previousCard *ngIf="deck[i-1]" [card]="deck[i-1]"></app-card>
+      <app-card #currentCard *ngIf="card" [card]="card"></app-card>
+      <app-card #nextCard *ngIf="deck[i+1]" [card]="deck[i+1]"></app-card>
     </div>
     <br/>
     <br/>
@@ -32,6 +32,6 @@
   <input type="checkbox" class="form-check-input" id="pauseOnIndicator" [(ngModel)]="pauseOnIndicator">
   <label class="form-check-label" for="pauseOnIndicator">Pause when clicking on navigation indicator</label>
 </div>
-<button type="button" (click)="togglePaused()" class="btn btn-outline-dark btn-sm">
+<button mat-button (click)="togglePaused()">
   {{paused ? 'Cycle' : 'Pause' }}
 </button>
