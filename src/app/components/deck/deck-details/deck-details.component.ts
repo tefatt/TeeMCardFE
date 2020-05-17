@@ -7,6 +7,7 @@ import {DeckPreview} from '../../../models/DeckPreview';
   styleUrls: ['./deck-details.component.css']
 })
 export class DeckDetailsComponent implements OnInit {
+  selectedDecks = [];
 
   constructor() {
   }
@@ -23,5 +24,15 @@ export class DeckDetailsComponent implements OnInit {
   ];
 
   ngOnInit(): void {
+
+  }
+
+  selectDeck(deckId: number) {
+    if (this.selectedDecks.includes(deckId)) {
+      this.selectedDecks = this.selectedDecks.filter(id => id !== deckId);
+    } else {
+      this.selectedDecks.push(deckId);
+    }
+    console.log(this.selectedDecks);
   }
 }

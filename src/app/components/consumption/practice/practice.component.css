@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.not-mastered {
+  height: 25%;
+  width: 25%;
+  background-color: goldenrod;
+  border-radius: 50%;
+}
+
+.somewhat-familiar {
+  height: 25%;
+  width: 25%;
+  background-color: goldenrod;
+  border-radius: 50%;
+}
+
+.mastered {
+  height: 25%;
+  width: 25%;
+  background-color: goldenrod;
+  border-radius: 50%;
+}
+
+.start-position {
+  height: 25%;
+  width: 25%;
+  position: relative;
+  left: 37%;
+  background-color: dodgerblue;
+  border-radius: 50%;
+}
+
+.card-style {
+  width: 60%;
+  position: relative;
+  left: 20%;
+  top: 20%
+}

@@ -1,8 +1,14 @@
+<h3>Check the decks you want to practice with!</h3>
+
 <div class="panel">
   <div class="deck" *ngFor="let deck of userDecks">
+    <mat-checkbox (change)="selectDeck(deck.id)"></mat-checkbox>
     <p>{{deck.name}}</p>
     <p>Size: {{deck.size}}</p>
     <button mat-button [routerLink]="['/deck/edit', deck.id]">Edit Deck</button>
+    <button mat-button [routerLink]="['/practice', deck.id]">Practice with this Deck</button>
     <p *ngIf="deck.description">Description: {{deck.description}}</p>
   </div>
 </div>
+<button mat-button [routerLink]="['/practice', 0]" [queryParams]="{ selectedDecks: selectedDecks }">Practice with selected Decks</button>
+

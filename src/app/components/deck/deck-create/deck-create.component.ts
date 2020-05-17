@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {CardComponent} from '../card/card.component';
+import {CardComponent} from '../../card/card/card.component';
 // import {NgbCarousel, NgbSlideEvent, NgbSlideEventSource} from '@ng-bootstrap/ng-bootstrap';
 // import {ViewChild} from '@angular/core';
 import {FormControl} from '@angular/forms';

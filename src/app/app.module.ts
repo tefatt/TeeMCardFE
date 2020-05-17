@@ -7,7 +7,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {CardComponent} from './components/deck/card/card.component';
+import {CardComponent} from './components/card/card/card.component';
 import {DragNDropComponent} from './components/drag-n-drop/drag-n-drop.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -26,11 +26,15 @@ import {MatInputModule} from '@angular/material/input';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {MbscModule} from '@mobiscroll/angular-lite';
 import {DeckDetailsComponent} from './components/deck/deck-details/deck-details.component';
-import {CardListComponent} from './components/deck/card-list/card-list.component';
+import {CardListComponent} from './components/card/card-list/card-list.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import { WordDescriptionComponent } from './components/deck/card/word-description/word-description.component';
+import { WordDescriptionComponent } from './components/card/card/word-description/word-description.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DeckEditComponent } from './components/deck/deck-edit/deck-edit.component';
+import { PracticeComponent } from './components/consumption/practice/practice.component';
+import { ChallengeComponent } from './components/consumption/challenge/challenge.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { CardStackComponent } from './components/card/card-stack/card-stack.component';
 
 
 @NgModule({
@@ -44,7 +48,10 @@ import { DeckEditComponent } from './components/deck/deck-edit/deck-edit.compone
     DeckCreateComponent,
     DeckDetailsComponent,
     WordDescriptionComponent,
-    DeckEditComponent
+    DeckEditComponent,
+    PracticeComponent,
+    ChallengeComponent,
+    CardStackComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +75,8 @@ import { DeckEditComponent } from './components/deck/deck-edit/deck-edit.compone
     NgbModule,
     MbscModule,
     MatAutocompleteModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,16 @@
+<div class="start-position">
+<!--  <div class="deck" *ngFor="let card of deck">-->
+  <div cdkDrag class="card-style">
+    <app-card [card]="deck[0]"></app-card>
+  </div>
+<!--  </div>-->
+</div>
+<br/>
+<div class="container">
+  <label>Try again</label>
+  <div class="not-mastered"></div>
+  <label>Almost there</label>
+  <div class="somewhat-familiar"></div>
+  <label>You know it!</label>
+  <div class="mastered"></div>
+</div>
